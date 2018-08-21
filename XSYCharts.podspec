@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "XSYCharts"
-  s.version = 'v1.0.0'
+  s.version = '1.0.0'
   s.summary = "Charts is a powerful & easy to use chart library for iOS, tvOS and OSX (and Android)"
   s.homepage = "https://github.com/YuXueBJ/XSYCharts"
   s.license = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
