@@ -382,7 +382,18 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                             negOffset = -negOffset - valueTextWidth
                         }
                         
-                        if dataSet.isDrawValuesEnabled
+                        if !drawValueAboveBar && dataSet.isDrawValuesEnabled && -posOffset>rect.size.width{
+                            drawValue(
+                                context: context,
+                                value: valueText,
+                                xPos: (rect.origin.x + rect.size.width)
+                                    + (val >= 0.0 ? -posOffset : -negOffset),
+                                yPos: y + yOffset,
+                                font: valueFont,
+                                align: textAlign,
+                                color: UIColor.black
+                            )
+                        }else if dataSet.isDrawValuesEnabled
                         {
                             drawValue(
                                 context: context,
